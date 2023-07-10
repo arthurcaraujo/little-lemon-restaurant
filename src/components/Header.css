@@ -1,0 +1,133 @@
+nav {
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+#navbar-logo {
+    cursor: pointer;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: 8vh;
+    margin: 0.5rem;
+}
+
+#hamburger-icon {
+    border-radius: 0.7rem;
+    cursor: pointer;
+    display: inline-block;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    height: 3.5rem;
+    margin: 0.5rem 2rem 0.5rem 1rem;
+    padding: 0.5rem;
+    width: 3.5rem;
+}
+
+#hamburger-icon:hover {
+    background-color: #F4CE14;
+}
+
+#hamburger-icon:active {
+    background-color: #EE9972;
+}
+
+.navbar-links {
+    display: none;
+    flex-direction: column;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    height: 100%;
+    list-style: none;
+}
+
+.navbar-links.expanded {
+    display: flex;
+}
+
+.navbar-links a {
+    align-items: center;
+    background-color: #FBDABB;
+    cursor: pointer;
+    display: flex;
+    font-weight: bold;
+    height: 100%;
+    justify-content: center;
+    padding: 0.6rem;
+}
+
+.navbar-links a:hover {
+    background-color: #F4CE14;
+}
+
+.navbar-links a:active {
+    background-color: #EE9972;
+}
+
+@media (min-width: 576px) {
+    nav {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+    }
+
+    #navbar-logo {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #hamburger-icon {
+        display: none;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: row;
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        margin: 0 0.5rem;
+    }
+
+    .navbar-links a {
+        background-color: #fff;
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        grid-template-columns: auto auto auto;
+    }
+
+    #navbar-logo {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #hamburger-icon {
+        display: none;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .navbar-links {
+        display: flex;
+        flex-direction: row;
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        margin: 0 0.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    #navbar-logo {
+        height: 10vh;
+        margin: 0.5rem;
+    }
+
+    .navbar-links a {
+        padding: 1rem;
+    }
+}
