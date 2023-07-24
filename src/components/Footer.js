@@ -1,4 +1,6 @@
 import "./Footer.css";
+import pages from "./pages/pages";
+import { Link } from "react-router-dom";
 import logoFooter from "../assets/logo-footer.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-icons';
@@ -17,6 +19,8 @@ const socialMedia = [
     { icon: faYoutube, name: "youtube" }
 ];
 
+const navbarLinks = Array.from(pages.values()).filter(page => page.fixed);
+
 export default function Footer() {
     return (
         <footer>
@@ -27,12 +31,16 @@ export default function Footer() {
             <section id="sitemap">
                 <h2>Sitemap</h2>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Menu</li>
-                    <li>Reservations</li>
-                    <li>Order Online</li>
-                    <li>Login</li>
+                    {navbarLinks.map(navbarLink =>
+                        <li key={navbarLink.id}>
+                            <Link
+                                className="sitemap-link"
+                                to={navbarLink.path}
+                            >
+                                {navbarLink.name}
+                            </Link>
+                        </li>
+                    )}
                 </ul>
             </section>
 
@@ -41,7 +49,10 @@ export default function Footer() {
                 <address>
                     {contactInfo.map(contact =>
                         <p key={contact.id}>
-                            <FontAwesomeIcon icon={contact.icon} size="lg" /> {contact.info}
+                            <FontAwesomeIcon
+                                icon={contact.icon}
+                                size="lg"
+                            /> {contact.info}
                         </p>
                     )}
                 </address>
@@ -57,7 +68,10 @@ export default function Footer() {
                                 rel="noreferrer"
                                 target="_blank"
                             >
-                                <FontAwesomeIcon icon={social.icon} size="lg" />
+                                <FontAwesomeIcon
+                                    icon={social.icon}
+                                    size="lg"
+                                />
                             </a>
                         </li>
                     )}

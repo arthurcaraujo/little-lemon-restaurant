@@ -3,17 +3,25 @@ footer {
     background-color: #495E57;
     color: #fff;
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: 15rem auto auto auto;
     justify-content: center;
     padding: 2rem;
 }
 
 #footer-logo {
     align-self: center;
+    height: 100%;
     justify-self: center;
-    width: 7rem;
+    grid-row: 1 / 2;
+}
+
+footer #social-media ul {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, auto);
+    justify-content: left;
 }
 
 footer ul {
@@ -24,26 +32,32 @@ footer li, footer p {
     margin: 0.5rem 0;
 }
 
-footer a:link {
+footer a:link, .sitemap-link {
     color: #fff;
     text-decoration: none;
 }
 
-footer a:visited {
+footer a:visited, .sitemap-link:visited {
     color: #fff;
 }
 
-footer a:hover {
+footer a:hover, .sitemap-link:hover {
     color: #F4CE14;
+}
+
+footer a:active, .sitemap-link:active {
+    color: #EE9972;
 }
 
 @media (min-width: 576px) {
     footer {
         align-content: center;
-        grid-template-columns: auto auto;
+        align-items: start;
+        gap: 2rem;
+        grid-template-columns: 254px 254px;
         grid-template-rows: auto auto;
-        justify-content: space-evenly;
-        padding: 1rem;
+        justify-content: center;
+        padding: 1rem 0;
     }
 
     footer section {
@@ -51,14 +65,35 @@ footer a:hover {
     }
 
     #footer-logo {
+        align-self: center;
+        height: 13rem;
+        justify-self: left;
         margin: 0;
-        width: 7rem;
     }
 }
 
 @media (min-width: 768px) {
     footer {
-        grid-template-columns: auto auto auto auto;
+        gap: 1rem;
+        grid-template-columns: 100px 136px 248px 188px;
         grid-template-rows: auto;
+        justify-items: center;
+    }
+
+    #footer-logo {
+        height: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    footer {
+        grid-template-columns: 150px 206px 300px 256px;
+    }
+}
+
+@media (min-width: 1200px) {
+    footer {
+        gap: 6rem;
+        grid-template-columns: 150px repeat(3, auto);
     }
 }

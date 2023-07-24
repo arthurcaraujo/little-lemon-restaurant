@@ -19,16 +19,69 @@ code {
 }
 
 h1, h2 {
-  font-family: "Markazi Text";
+  font-family: "Markazi Text", sans-serif;
   font-weight: normal;
   line-height: 1;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+.section-title {
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 address {
   font-style: normal;
 }
 
+.btn {
+  background-color: #F4CE14;
+  border: none;
+  border-radius: 1.5rem;
+  color: #000;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #EE9972;
+}
+
+.btn:active {
+  background-color: #FBDABB;
+}
+
 img {
   max-height: 100%;
   max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  h1 {
+      font-size: 3.5rem;
+  }
+
+  h2 {
+      font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  p, .link, ul, li, h3, .btn {
+    font-size: 1.2rem;
+  }
 }
