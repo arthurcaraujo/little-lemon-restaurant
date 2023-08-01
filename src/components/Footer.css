@@ -88,6 +88,7 @@ footer a:active, .sitemap-link:active {
 @media (min-width: 992px) {
     footer {
         grid-template-columns: 150px 206px 300px 256px;
+        padding: 2rem 0;
     }
 }
 
@@ -95,5 +96,6 @@ footer a:active, .sitemap-link:active {
     footer {
         gap: 6rem;
         grid-template-columns: 150px repeat(3, auto);
+        padding: 3rem 0;
     }
 }

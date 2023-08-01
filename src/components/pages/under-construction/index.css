@@ -1,0 +1,74 @@
+.under-construction {
+    background-color: #FBDABB;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    justify-items: center;
+    padding: 3rem 1rem;
+}
+
+.under-construction .icon-container {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    font-size: 4rem;
+    padding: 0;
+}
+
+.icon-container > .dot {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    line-height: 1;
+    transform: translate(0, -2rem);
+}
+
+.icon-container > .dot-one {
+    animation-name: dot-one;
+}
+
+@keyframes dot-one {
+    0% {color: transparent; transform: translate(0, -2rem);}
+    33% {color: #000; transform: translate(0, 0);}
+    100% {color: #000; transform: translate(0, 0);}
+}
+
+.icon-container > .dot-two {
+    animation-name: dot-two;
+}
+
+@keyframes dot-two {
+    0% {color: transparent; transform: translate(0, -2rem);}
+    33% {color: transparent; transform: translate(0, -2rem);}
+    66% {color: #000; transform: translate(0, 0);}
+    100% {color: #000; transform: translate(0, 0);}
+}
+
+.icon-container > .dot-three {
+    animation-name: dot-three;
+}
+
+@keyframes dot-three {
+    0% {color: transparent; transform: translate(0, -2rem);}
+    66% {color: transparent; transform: translate(0, -2rem);}
+    100% {color: #000; transform: translate(0, 0);}
+}
+
+@media (min-width: 768px) {
+    .under-construction {
+        padding: 4rem 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .under-construction {
+        padding: 5rem 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .under-construction {
+        padding: 8rem 1rem;
+    }
+}
