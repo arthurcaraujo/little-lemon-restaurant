@@ -59,11 +59,12 @@ export default function Footer() {
             </section>
 
             <section id="social-media">
-               <h2>Our social media</h2>
+                <h2>Our social media</h2>
                 <ul>
                     {socialMedia.map(social =>
                         <li key={social.name}>
                             <a
+                                aria-label={social.name}
                                 href={`https://www.${social.name}.com`}
                                 rel="noreferrer"
                                 target="_blank"
