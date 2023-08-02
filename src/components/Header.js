@@ -33,7 +33,7 @@ export default function Header() {
                     {navbarLinks.map(navbarLink =>
                         <li key={navbarLink.id}>
                             <Link
-                                className={pathname == navbarLink.path
+                                className={pathname === navbarLink.path
                                     ? "link current-page"
                                     : "link"}
                                 to={navbarLink.path}
